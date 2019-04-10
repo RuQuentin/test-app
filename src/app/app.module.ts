@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MainModule } from './pages/main/main.module';
 import { HttpClientModule }    from '@angular/common/http';
 import { ModalComponent } from './components/modal/modal.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ModalComponent } from './components/modal/modal.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MainModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [
   ],

@@ -17,6 +17,4 @@ export class ModalComponent {
   ngDoCheck() {
     this.article = this.articleService.getArticle();
   }
-
-
 }

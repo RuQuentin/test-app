@@ -21,6 +21,7 @@ export class MainComponent implements OnInit {
   ]
 
   list: Observable<IArticle[]>;
+  show: boolean = false;
 
   constructor(
     private apiService: ApiService,
@@ -40,6 +41,7 @@ export class MainComponent implements OnInit {
     }, 2000)
 
   chooseArticle = (article: IArticle) => {
+    this.show = true;
     this.articleService.setArticle(article)
   }
 }
