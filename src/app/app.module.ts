@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainModule } from './pages/main/main.module';
 import { HttpClientModule }    from '@angular/common/http';
-import { ModalComponent } from './components/modal/modal.component'
+import { ModalComponent } from './components/modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,6 @@ import { ModalComponent } from './components/modal/modal.component'
     HttpClientModule
   ],
   providers: [
-
   ],
   bootstrap: [AppComponent]
 })

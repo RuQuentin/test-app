@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MainComponent } from './main.component';
-import { ApiService } from './main.services';
 import { AppRoutingModule } from '../../app-routing.module';
+import { ApiService } from '../../shared/services/api.service';
+import { ArticleService } from '../../shared/services/article.service';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { AppRoutingModule } from '../../app-routing.module';
     AppRoutingModule
   ],
   providers: [
-    ApiService
+    ApiService,
+    ArticleService
   ],
   exports: [
     MainComponent

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './main.services';
-import { of } from 'rxjs';
+import { ApiService } from '../../shared/services/api.service';
+import { ArticleService } from '../../shared/services/article.service';
+
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IRes } from '../../models/res.interface';
-import { IList } from '../../models/list.interface';
+import { IArticle } from '../../models/article.interface';
 
 @Component({
   selector: 'main-component',
@@ -18,10 +20,11 @@ export class MainComponent implements OnInit {
     'author'
   ]
 
-  list: any;
+  list: Observable<IArticle[]>;
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
+    private articleService: ArticleService
   ) {};
 
   ngOnInit() {
@@ -32,8 +35,11 @@ export class MainComponent implements OnInit {
     this.list = this.apiService.requestNews()
       .pipe(
       map((res: IRes) => {
-        console.log(res.hits)
-        return of(res.hits)})
+        return res.hits})
     )
     }, 2000)
+
+  chooseArticle = (article: IArticle) => {
+    this.articleService.setArticle(article)
+  }
 }

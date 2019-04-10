@@ -1,5 +1,5 @@
-import { IList } from './list.interface';
+import { IArticle } from './article.interface';
 
 export interface IRes {
-  hits: IList[]
+  hits: IArticle[]
 }

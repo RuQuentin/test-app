@@ -33,5 +33,6 @@
 
   <tr mat-header-row *matHeaderRowDef="titles"></tr>
   <tr class="row" [routerLink]="['/', row.objectID]"
-  mat-row *matRowDef="let row; columns: titles;"></tr>
+  mat-row *matRowDef="let row; columns: titles;"
+  (click)="chooseArticle(row)"></tr>
 </table>

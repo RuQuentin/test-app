@@ -1,4 +1,4 @@
-export interface IList {
+export interface IArticle {
   ​​author: string,
   ​​created_at: string,
   ​​title: string,
