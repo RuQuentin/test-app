@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MainComponent } from './main.component';
 import { ApiService } from './main.services';
+import { AppRoutingModule } from '../../app-routing.module';
+
 
 @NgModule({
   declarations: [ 
@@ -10,7 +12,8 @@ import { ApiService } from './main.services';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule
   ],
   providers: [
     ApiService

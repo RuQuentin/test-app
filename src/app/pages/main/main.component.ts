@@ -35,5 +35,5 @@ export class MainComponent implements OnInit {
         console.log(res.hits)
         return of(res.hits)})
     )
-    }, 5000)
+    }, 2000)
 }
