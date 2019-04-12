@@ -1,1 +1,6 @@
-{{ article | json }}
+<div class="modal-wrapper" (click)="closeModal($event)">
+<mat-card class="modal">
+  <p class="info">{{ article | json }}</p>
+  <button class="button" mat-raised-button>Close</button>
+</mat-card>
+</div>

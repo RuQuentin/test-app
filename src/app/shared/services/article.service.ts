@@ -9,7 +9,6 @@ export class ArticleService {
 
   setArticle = (item: IArticle) => {
     this.article = item;
-    console.log(this.article)
   }
 
   getArticle = () => {

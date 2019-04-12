@@ -32,13 +32,16 @@ export class MainComponent implements OnInit {
     this.getNews();
   }
 
-  getNews = () => setInterval( () => {
-    this.list = this.apiService.requestNews()
-      .pipe(
-      map((res: IRes) => {
-        return res.hits})
-    )
-    }, 2000)
+  getNews = () => {
+    const int = setInterval( () => {
+    this.apiService.requestNews()
+      .subscribe((res: IRes) => {
+        this.list = of(res.hits)
+      })
+    }, 2000);
+    
+    // clearInterval(int);
+  }
 
   chooseArticle = (article: IArticle) => {
     this.show = true;
